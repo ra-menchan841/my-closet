@@ -22,3 +22,18 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+# アプリ概要
+
+# DB設計
+
+## itemsテーブル
+
+## usersテーブル
+
+## categoriesテーブル
+
+## colorsテーブル
+
+## seasonsテーブル
