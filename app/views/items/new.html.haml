@@ -1,70 +1,32 @@
-.header
-  .header__title
-    MyCloset
-  .header__login
-    .header__login__left
-      ログイン
-    .header__login__right
-      ログアウト
-.main
-  .main__side
-    .main__side__registerFunction
-      = link_to new_item_path, class: "register" do
-        = "＋ 服を登録する"
-    .main__side__categories
-      %ul.category
-        %li.belong
-          ワンピース
-        %li.amount
-          ６
-      %ul.category
-        %li.belong
-          トップス
-        %li.amount
-          ６
-      %ul.category
-        %li.belong
-          スカート
-        %li.amount
-          ６
-      %ul.category
-        %li.belong
-          パンツ
-        %li.amount
-          ６
-      %ul.category
-        %li.belong
-          アウター
-        %li.amount
-          ６
-      %ul.category
-        %li.belong
-          バッグ
-        %li.amount
-          ６
-      %ul.category
-        %li.belong
-          シューズ
-        %li.amount
-          ６
-  .main__categoryDetail
-    .form
-      = form_for @item do |f|
-        = f.file_field :image, class: "image"
+.main__categoryDetail
+  .doRegister
+    登録する
+  .form
+    = form_for @item do |f|
+      = f.file_field :image, class: "image"
+      .allTags
         .categoryTag
-          = f.collection_radio_buttons(:category_id, Category.all, :id, :name) do |category|
-            = category.label do
-              = category.text
-              = category.radio_button
+          .tagName
+            Category
+          .tag
+            = f.collection_radio_buttons(:category_id, Category.all, :id, :name) do |category|
+              = category.label do
+                = category.text
+                = category.radio_button
         .colorTag
-          = f.collection_radio_buttons(:color_id, Color.all, :id, :name) do |color|
-            = color.label do
-              = color.text
-              = color.radio_button
+          .tagName
+            Color
+          .tag
+            = f.collection_radio_buttons(:color_id, Color.all, :id, :name) do |color|
+              = color.label do
+                = color.text
+                = color.radio_button
         .seasonTag
-          = f.collection_radio_buttons(:season_id, Season.all, :id, :name) do |season|
-            = season.label do
-              = season.text
-              = season.radio_button
+          .tagName
+            Season
+          .tag
+            = f.collection_radio_buttons(:season_id, Season.all, :id, :name) do |season|
+              = season.label do
+                = season.text
+                = season.radio_button
         = f.submit '登録', class: "sendBtn"
-.footer

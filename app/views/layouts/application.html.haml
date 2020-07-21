@@ -7,4 +7,55 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = yield
+    .header
+      .header__title
+        = link_to root_path, class: "titleColor" do
+          = "MyCloset"
+      .header__login
+        .header__login__left
+          ログイン
+        .header__login__right
+          ログアウト
+    .main
+      .main__side
+        .main__side__registerFunction
+          = link_to new_item_path, class: "register" do
+            = "＋ 服を登録する"
+        .main__side__categories
+          %ul.category
+            %li.belong
+              ワンピース
+            %li.amount
+              ６
+          %ul.category
+            %li.belong
+              トップス
+            %li.amount
+              ６
+          %ul.category
+            %li.belong
+              スカート
+            %li.amount
+              ６
+          %ul.category
+            %li.belong
+              パンツ
+            %li.amount
+              ６
+          %ul.category
+            %li.belong
+              アウター
+            %li.amount
+              ６
+          %ul.category
+            %li.belong
+              バッグ
+            %li.amount
+              ６
+          %ul.category
+            %li.belong
+              シューズ
+            %li.amount
+              ６
+      = yield
+    .footer

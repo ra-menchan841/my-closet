@@ -18,8 +18,12 @@
   &__title {
     height: 40px;
     width: 250px;
-    color: white;
-    font-size: 40px;
+
+    .titleColor {
+      text-decoration: none;
+      color: white;
+      font-size: 40px;
+    }
   }
 
   &__login {
