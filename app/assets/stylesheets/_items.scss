@@ -54,13 +54,18 @@
     background-color: wheat;
     position: fixed;
 
-    &__register {
+    &__registerFunction {
       height: 90px;
       text-align: center;
       line-height: 90px;
       font-size: 24px;
-      color: white;
       background-color: palevioletred;
+
+      .register {
+        text-decoration: none;
+        color: white;
+        font-size: 24px;
+      }
     }
 
     &__categories {
@@ -84,7 +89,7 @@
     padding-left: 290px;
     padding-bottom: 80px;
     background-color: white;
-    height: 800px;
+    height: 700px;
     overflow: scroll;
     display: flex;
     flex-wrap: wrap;
