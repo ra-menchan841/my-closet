@@ -22,40 +22,11 @@
           = link_to new_item_path, class: "register" do
             = "＋ 服を登録する"
         .main__side__categories
-          %ul.category
-            %li.belong
-              ワンピース
-            %li.amount
-              ６
-          %ul.category
-            %li.belong
-              トップス
-            %li.amount
-              ６
-          %ul.category
-            %li.belong
-              スカート
-            %li.amount
-              ６
-          %ul.category
-            %li.belong
-              パンツ
-            %li.amount
-              ６
-          %ul.category
-            %li.belong
-              アウター
-            %li.amount
-              ６
-          %ul.category
-            %li.belong
-              バッグ
-            %li.amount
-              ６
-          %ul.category
-            %li.belong
-              シューズ
-            %li.amount
-              ６
+          - @categoryTags.zip(@amounts) do |categoryTag, amount|
+            %ul.category
+              %li.belong
+                = categoryTag.name
+              %li.amount
+                = amount
       = yield
     .footer
