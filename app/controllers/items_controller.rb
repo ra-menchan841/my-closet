@@ -21,7 +21,7 @@ class ItemsController < ApplicationController
   def countItems
     tagNumber = 0
     @amounts = []
-      while tagNumber < 8 do
+      while tagNumber < 7 do
         tagNumber += 1
         amount = Item.where(category_id: tagNumber).length
         @amounts << amount
