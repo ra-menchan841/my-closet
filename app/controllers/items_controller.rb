@@ -1,7 +1,8 @@
 class ItemsController < ApplicationController
-  before_action :create_categoryTags, :countItems, only: [:index, :new]
+  before_action :set_categories, :set_amounts, only: [:index, :new]
 
   def index
+    @items = Item.all
   end
 
   def new
@@ -9,23 +10,23 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @image = Item.create(item_params)
+    @item = Item.create(item_params)
     redirect_to root_path
   end
 
   private
-  def create_categoryTags
-    @categoryTags = Category.all
+  def set_categories
+    @categories = Category.all
   end
 
-  def countItems
-    tagNumber = 0
+  def set_amounts
     @amounts = []
-      while tagNumber < 7 do
-        tagNumber += 1
-        amount = Item.where(category_id: tagNumber).length
-        @amounts << amount
-      end
+    number = 0
+    while number < 7 do
+      number += 1
+      @amount = Item.where(category_id: number).count
+      @amounts << @amount
+    end
   end
 
   def item_params

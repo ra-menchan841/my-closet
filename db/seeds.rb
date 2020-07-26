@@ -9,25 +9,28 @@
 Category.create([
   { name: 'トップス' },
   { name: 'スカート' },
-  { name: 'ワンピース' },
   { name: 'パンツ' },
+  { name: 'ワンピース' },
   { name: 'アウター' },
   { name: 'バッグ' },
   { name: 'シューズ' }
-  ])
+])
+
 Color.create([
-  { name: 'ブラック' },
-  { name: 'ホワイト' },
+  { name: '黒' },
+  { name: '白' },
   { name: 'グレー' },
   { name: 'ベージュ' },
   { name: 'ブラウン' },
   { name: 'レッド' },
   { name: 'ピンク' },
-  { name: 'ブルー' },
+  { name: 'オレンジ' },
   { name: 'イエロー' },
   { name: 'グリーン' },
+  { name: 'ブルー' },
   { name: 'パープル' }
 ])
+
 Season.create([
   { name: '春' },
   { name: '夏' },

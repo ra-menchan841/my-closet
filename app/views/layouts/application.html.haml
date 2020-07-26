@@ -22,10 +22,10 @@
           = link_to new_item_path, class: "register" do
             = "＋ 服を登録する"
         .main__side__categories
-          - @categoryTags.zip(@amounts) do |categoryTag, amount|
+          - @categories.zip(@amounts) do |category, amount|
             %ul.category
               %li.belong
-                = categoryTag.name
+                = category.name
               %li.amount
                 = amount
       = yield

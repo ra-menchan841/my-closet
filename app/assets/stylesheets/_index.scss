@@ -74,12 +74,12 @@
 
     &__categories {
       .category {
-        height: 70px;
+        height: 77px;
         background-color: plum;
         font-size: 20px;
         color: white;
         text-align: center;
-        line-height: 70px;
+        line-height: 77px;
         display: flex;
         justify-content: space-between;
         list-style: none;
@@ -102,7 +102,6 @@
     .itemImage {
       height: 220px;
       width: 220px;
-      background-color: lightgray;
       margin: 30px;
     }
   }
