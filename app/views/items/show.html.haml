@@ -9,3 +9,6 @@
       = @color.name
     .showDetail__tags__season
       = @season.name
+    .deleteBtn
+      = link_to item_path(@item.id), method: :delete do
+        = "削除する"

@@ -21,7 +21,11 @@ class ItemsController < ApplicationController
     @season = @item.season
   end
 
-  
+  def destroy
+    item = Item.find(params[:id])
+    item.destroy
+    redirect_to root_path
+  end
 
   private
   def set_categories
