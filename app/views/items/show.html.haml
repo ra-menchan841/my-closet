@@ -1,0 +1,11 @@
+.main__categoryDetail
+  .showDetail__image
+    .image
+      = image_tag @item.image.url
+  .showDetail__tags
+    .showDetail__tags__category
+      = @category.name
+    .showDetail__tags__color
+      = @color.name
+    .showDetail__tags__season
+      = @season.name

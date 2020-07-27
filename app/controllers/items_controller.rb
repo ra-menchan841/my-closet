@@ -16,7 +16,12 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
+    @category = @item.category
+    @color = @item.color
+    @season = @item.season
   end
+
+  
 
   private
   def set_categories
