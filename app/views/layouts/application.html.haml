@@ -24,8 +24,8 @@
         .main__side__categories
           - @categories.zip(@amounts) do |category, amount|
             %ul.category
-              %li.belong
-                = link_to category_path(category.id) do
+              %li
+                = link_to category_path(category.id), class: "belong" do
                   = category.name
               %li.amount
                 = amount

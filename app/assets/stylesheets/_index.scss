@@ -77,13 +77,21 @@
         height: 77px;
         background-color: plum;
         font-size: 20px;
-        color: white;
         text-align: center;
         line-height: 77px;
         display: flex;
         justify-content: space-between;
         list-style: none;
         padding: 0 40px;
+
+        .belong {
+          text-decoration: none;
+          color: white;
+          }
+        .amount {
+          color: white;
+        }
+      
       }
     }
   }
