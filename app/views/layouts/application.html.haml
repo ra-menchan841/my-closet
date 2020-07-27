@@ -25,7 +25,8 @@
           - @categories.zip(@amounts) do |category, amount|
             %ul.category
               %li.belong
-                = category.name
+                = link_to category_path(category.id) do
+                  = category.name
               %li.amount
                 = amount
       = yield
