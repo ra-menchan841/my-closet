@@ -1,0 +1,32 @@
+.main__categoryDetail {
+  display: flex;
+
+  .showDetail__image {
+    height: 300px;
+    width: 300px;
+    background-color: khaki;
+  }
+
+  .showDetail__tags {
+    &__category {
+      height: 50px;
+      width: 300px;
+      background-color: paleturquoise;
+    }
+    &__color {
+      height: 50px;
+      width: 300px;
+      background-color: tomato;
+    }
+    &__season {
+      height: 50px;
+      width: 300px;
+      background-color: blueviolet;
+    }
+  }
+  .deleteBtn {
+    height: 30px;
+    width: 300px;
+    background-color: lightcoral;
+  }
+}

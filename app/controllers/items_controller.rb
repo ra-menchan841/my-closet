@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_categories, :set_amounts, only: [:index, :new]
+  before_action :set_categories, :set_amounts, only: [:index, :new, :show]
 
   def index
     @items = Item.all
@@ -11,6 +11,19 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.create(item_params)
+    redirect_to root_path
+  end
+
+  def show
+    @item = Item.find(params[:id])
+    @category = @item.category
+    @color = @item.color
+    @season = @item.season
+  end
+
+  def destroy
+    item = Item.find(params[:id])
+    item.destroy
     redirect_to root_path
   end
 
