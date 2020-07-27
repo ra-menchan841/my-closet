@@ -1,0 +1,38 @@
+.main__categoryDetail {
+  text-align: center;
+
+  .doRegister {
+    height: 50px;
+    width: 1000px;
+    line-height: 50px;
+  }
+  .form {
+    
+    .image {
+      height: 100px;
+      width: 1000px;
+      line-height: 100px;
+    }
+
+    .allTags {
+      height: 400px;
+      width: 1000px;
+
+      .tagName {
+        height: 60px;
+        line-height: 60px;
+      }
+
+      .tag {
+        height: 60px;
+        line-height: 60px;
+      }
+
+    }
+      .sendBtn {
+        height: 60px;
+        width: 70px;
+        line-height: 60px;
+      }
+  }
+}
