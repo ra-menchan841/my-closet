@@ -12,10 +12,17 @@
         = link_to root_path, class: "titleColor" do
           = "MyCloset"
       .header__login
-        .header__login__left
-          ログイン
-        .header__login__right
-          ログアウト
+        - if user_signed_in?
+          .header__login__right
+            = link_to destroy_user_session_path, class: "right", method: :delete do
+              = "ログアウト"
+        - else
+          .header__login__left
+            = link_to new_user_session_path, class: "left" do
+              = "ログイン"
+          .header__login__right
+            = link_to new_user_registration_path, class: "right" do
+              = "新規登録"
     .main
       .main__side
         .main__side__registerFunction
@@ -29,5 +36,6 @@
                   = category.name
               %li.amount
                 = amount
-      = yield
+      .main__categoryDetail
+        = yield
     .footer

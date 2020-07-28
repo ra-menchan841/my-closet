@@ -1,5 +1,4 @@
-.main__categoryDetail
-  - @items.each do |item|
-    .itemImage
-      = link_to item_path(item.id) do
-        = image_tag item.image.url
+- @items.each do |item|
+  .itemImage
+    = link_to item_path(item.id) do
+      = image_tag item.image.url
