@@ -25,17 +25,58 @@
               = "新規登録"
     .main
       .main__side
-        .main__side__registerFunction
-          = link_to new_item_path, class: "register" do
-            = "＋ 服を登録する"
-        .main__side__categories
-          - @categories.zip(@amounts) do |category, amount|
+        - if user_signed_in?
+          .main__side__registerFunction
+            = link_to new_item_path, class: "register" do
+              = "＋ 服を登録する"
+          .main__side__categories
+            - @categories.zip(@amounts) do |category, amount|
+              %ul.category
+                %li
+                  = link_to category_path(category.id), class: "belong" do
+                    = category.name
+                %li.amount
+                  = amount
+        - else
+          .main__side__registerFunction
+            = link_to root_path, class: "register" do
+              = "＋ 服を登録する"
+          .main__side__categories
             %ul.category
-              %li
-                = link_to category_path(category.id), class: "belong" do
-                  = category.name
+              %li.belong
+                = "トップス"
               %li.amount
-                = amount
+                = "0"
+            %ul.category
+              %li.belong
+                = "スカート"
+              %li.amount
+                = "0"
+            %ul.category
+              %li.belong
+                = "パンツ"
+              %li.amount
+                = "0"
+            %ul.category
+              %li.belong
+                = "ワンピース"
+              %li.amount
+                = "0"
+            %ul.category
+              %li.belong
+                = "アウター"
+              %li.amount
+                = "0"
+            %ul.category
+              %li.belong
+                = "バッグ"
+              %li.amount
+                = "0"
+            %ul.category
+              %li.belong
+                = "シューズ"
+              %li.amount
+                = "0"
       .main__categoryDetail
         = yield
     .footer
