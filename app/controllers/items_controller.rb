@@ -1,8 +1,9 @@
 class ItemsController < ApplicationController
   before_action :set_categories, :set_amounts, only: [:index, :new, :show]
+  before_action :move_to_index, only: [:new, :create, :show]
 
   def index
-    @items = Item.all
+      @items = Item.all
   end
 
   def new
@@ -40,6 +41,10 @@ class ItemsController < ApplicationController
       @amount = Item.where(category_id: number).count
       @amounts << @amount
     end
+  end
+
+  def move_to_index
+    redirect_to root_path unless user_signed_in?
   end
 
   def item_params

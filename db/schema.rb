@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20200728102807) do
     t.integer  "category_id", null: false
     t.integer  "color_id",    null: false
     t.integer  "season_id",   null: false
+    t.integer  "user_id",     null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
