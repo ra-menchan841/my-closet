@@ -1,14 +1,22 @@
-.main__categoryDetail
-  .showDetail__image
-    .image
-      = image_tag @item.image.url
-  .showDetail__tags
-    .showDetail__tags__category
+.showDetail__image
+  .image
+    = image_tag @item.image.url
+.showDetail__tags
+  %ul.showDetail__tags__category
+    %li
+      = "Category："
+    %li
       = @category.name
-    .showDetail__tags__color
+  %ul.showDetail__tags__color
+    %li
+      = "Color："
+    %li
       = @color.name
-    .showDetail__tags__season
+  %ul.showDetail__tags__season
+    %li
+      = "Season："
+    %li
       = @season.name
-    .deleteBtn
-      = link_to item_path(@item.id), method: :delete do
-        = "削除する"
+  .Btns
+    = link_to item_path(@item.id), class: "delete", method: :delete do
+      = "削除"
