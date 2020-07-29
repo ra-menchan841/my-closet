@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   before_action :move_to_index, only: [:new, :create, :show]
 
   def index
-      @items = Item.all
+   @items = Item.where(user_id: current_user.id) if user_signed_in?
   end
 
   def new
@@ -34,12 +34,22 @@ class ItemsController < ApplicationController
   end
 
   def set_amounts
-    @amounts = []
-    number = 0
-    while number < 7 do
-      number += 1
-      @amount = Item.where(category_id: number).count
-      @amounts << @amount
+    if user_signed_in?
+      @amounts = []
+      number = 0
+      while number < 7 do
+        number += 1
+        @amount = Item.where(category_id: number, user_id: current_user.id).count
+        @amounts << @amount
+      end
+    else
+      @amounts = []
+      number = 0
+      while number < 7 do
+        number += 1
+        @amount = 0
+        @amounts << @amount
+      end
     end
   end
 
@@ -48,6 +58,6 @@ class ItemsController < ApplicationController
   end
 
   def item_params
-    params.require(:item).permit(:image, :category_id, :color_id, :season_id)
+    params.require(:item).permit(:image, :category_id, :color_id, :season_id).merge(user_id: current_user.id)
   end
 end
