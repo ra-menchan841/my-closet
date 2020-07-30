@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   before_action :move_to_index, only: [:new, :create, :show]
 
   def index
-   @items = Item.where(user_id: current_user.id) if user_signed_in?
+   @items = Item.where(user_id: current_user.id).order("created_at DESC") if user_signed_in?
   end
 
   def new
