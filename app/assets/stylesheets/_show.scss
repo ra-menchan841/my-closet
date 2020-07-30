@@ -1,32 +1,51 @@
-.main__categoryDetail {
-  display: flex;
-
   .showDetail__image {
-    height: 300px;
-    width: 300px;
-    background-color: khaki;
+    height: 220px;
+    width: 220px;
+    margin: 30px;
   }
 
   .showDetail__tags {
+    height: 220px;
+    width: 220px;
+    margin: 30px;
+    color: white;
+    background-color: plum;
+
     &__category {
-      height: 50px;
+      height: 55px;
       width: 300px;
-      background-color: paleturquoise;
+      padding-left: 20px;
+      list-style: none;
+      display: flex;
+      line-height: 55px;
+      
     }
     &__color {
-      height: 50px;
+      height: 55px;
       width: 300px;
-      background-color: tomato;
+      padding-left: 20px;
+      list-style: none;
+      display: flex;
+      line-height: 55px;
     }
     &__season {
-      height: 50px;
+      height: 55px;
       width: 300px;
-      background-color: blueviolet;
+      padding-left: 20px;
+      list-style: none;
+      display: flex;
+      line-height: 55px;
+    }
+
+  }
+  .Btns {
+    height: 55px;
+    width: 300px;
+    padding-left: 20px;
+    line-height: 55px;
+
+    .delete {
+      text-decoration: none;
+      color: white;
     }
   }
-  .deleteBtn {
-    height: 30px;
-    width: 300px;
-    background-color: lightcoral;
-  }
-}

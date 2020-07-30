@@ -17,23 +17,23 @@ Category.create([
 ])
 
 Color.create([
-  { name: '黒' },
-  { name: '白' },
-  { name: 'グレー' },
-  { name: 'ベージュ' },
-  { name: 'ブラウン' },
-  { name: 'レッド' },
-  { name: 'ピンク' },
-  { name: 'オレンジ' },
-  { name: 'イエロー' },
-  { name: 'グリーン' },
-  { name: 'ブルー' },
-  { name: 'パープル' }
+  { name: 'black' },
+  { name: 'white' },
+  { name: 'gray' },
+  { name: 'beige' },
+  { name: 'brown' },
+  { name: 'red' },
+  { name: 'pink' },
+  { name: 'orange' },
+  { name: 'yellow' },
+  { name: 'green' },
+  { name: 'blue' },
+  { name: 'purple' }
 ])
 
 Season.create([
-  { name: '春' },
-  { name: '夏' },
-  { name: '秋' },
-  { name: '冬' }
+  { name: 'spring' },
+  { name: 'summer' },
+  { name: 'autom' },
+  { name: 'winter' }
 ])

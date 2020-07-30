@@ -1,3 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  height: 80px;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  background-color: pink;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  text-align: center;
+  line-height: 40px;
+
+  &__title {
+    height: 40px;
+    width: 250px;
+
+    .titleColor {
+      text-decoration: none;
+      color: white;
+      font-size: 40px;
+    }
+  }
+
+  &__login {
+    display: flex;
+    padding-right: 25px;
+
+    &__left {
+      height: 40px;
+      width: 180px;
+      margin-right: 15px;
+      color: white;
+      border: solid 1px;
+      .left {
+        color: white;
+        text-decoration: none;
+      }
+    }
+
+    &__right {
+      height: 40px;
+      width: 180px;
+      border: solid 1px;
+      color: white;
+      .right {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  padding: 80px 0;
+  display: flex;
+
+  &__side {
+    width: 270px;
+    background-color: wheat;
+    position: fixed;
+
+
+    &__registerFunction {
+      height: 90px;
+      text-align: center;
+      line-height: 90px;
+      font-size: 24px;
+      background-color: palevioletred;
+
+      .register {
+        text-decoration: none;
+        color: white;
+        font-size: 24px;
+      }
+    }
+
+    &__categories {
+      .category {
+        height: 77px;
+        width: 270px;
+        background-color: plum;
+        font-size: 20px;
+        text-align: center;
+        line-height: 77px;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0 40px;
+
+        .belong {
+          text-decoration: none;
+          color: white;
+          }
+        .amount {
+          color: white;
+        }
+      
+      }
+    }
+  }
+
+  &__categoryDetail {
+    width: calc(100vw - 270px);
+    margin-left: 270px;
+    padding-bottom: 80px;
+    padding-left: 30px;
+    background-color: white;
+    height: 700px;
+    overflow: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    .itemImage {
+      height: 220px;
+      width: 220px;
+      margin: 30px;
+    }
+  }
+}
+.footer {
+  height: 80px;
+  width: 100vw;
+  background-color: pink;
+  position: fixed;
+  bottom: 0px;
+  z-index: 1;
+}
 @import "reset";
 @import "index";
 @import "new";
