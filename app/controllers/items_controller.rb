@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   before_action :move_to_index, only: [:new, :create, :show]
 
   def index
-      @items = Item.where(user_id: current_user.id).order("created_at DESC") if user_signed_in?
+    @items = Item.where(user_id: current_user.id).order("created_at DESC") if user_signed_in?
   end
 
   def new
@@ -29,34 +29,6 @@ class ItemsController < ApplicationController
   end
 
   private
-  def set_categories
-    @categories = Category.all
-  end
-
-  def set_amounts
-    if user_signed_in?
-      @amounts = []
-      number = 0
-      while number < 7 do
-        number += 1
-        @amount = Item.where(category_id: number, user_id: current_user.id).count
-        @amounts << @amount
-      end
-    else
-      @amounts = []
-      number = 0
-      while number < 7 do
-        number += 1
-        @amount = 0
-        @amounts << @amount
-      end
-    end
-  end
-
-  def move_to_index
-    redirect_to root_path unless user_signed_in?
-  end
-
   def item_params
     params.require(:item).permit(:image, :category_id, :color_id, :season_id).merge(user_id: current_user.id)
   end

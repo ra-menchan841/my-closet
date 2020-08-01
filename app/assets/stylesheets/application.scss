@@ -1,13 +1,21 @@
+$mainFontColor: white;
+$mainBackgroundColor: pink;
+$subBackgroundColor: plum;
+
+@mixin header-footer-layout {
+  height: 80px;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  background-color: $mainBackgroundColor;
+}
+
 * {
   box-sizing: border-box;
 }
 
 .header {
-  height: 80px;
-  width: 100vw;
-  position: fixed;
-  z-index: 1;
-  background-color: pink;
+  @include header-footer-layout;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,7 +29,7 @@
 
     .titleColor {
       text-decoration: none;
-      color: white;
+      color: $mainFontColor;
       font-size: 40px;
     }
   }
@@ -34,11 +42,11 @@
       height: 40px;
       width: 180px;
       margin-right: 15px;
-      color: white;
+      color: $mainFontColor;
       border: solid 1px;
 
       .left {
-        color: white;
+        color: $mainFontColor;
         text-decoration: none;
 
       }
@@ -48,9 +56,10 @@
       height: 40px;
       width: 180px;
       border: solid 1px;
-      color: white;
+      color: $mainFontColor;
+
       .right {
-        color: white;
+        color: $mainFontColor;
         text-decoration: none;
       }
     }
@@ -65,7 +74,6 @@
 
   &__side {
     width: 270px;
-    background-color: wheat;
     position: fixed;
 
 
@@ -78,7 +86,7 @@
 
       .register {
         text-decoration: none;
-        color: white;
+        color: $mainFontColor;
         font-size: 24px;
       }
     }
@@ -87,7 +95,7 @@
       .category {
         height: 77px;
         width: 270px;
-        background-color: plum;
+        background-color: $subBackgroundColor;
         font-size: 20px;
         text-align: center;
         line-height: 77px;
@@ -98,10 +106,10 @@
 
         .belong {
           text-decoration: none;
-          color: white;
+          color: $mainFontColor;
           }
         .amount {
-          color: white;
+          color: $mainFontColor;
         }
       
       }
@@ -128,12 +136,8 @@
   }
 }
 .footer {
-  height: 80px;
-  width: 100vw;
-  background-color: pink;
-  position: fixed;
+  @include header-footer-layout;
   bottom: 0px;
-  z-index: 1;
 }
 @import "reset";
 @import "index";
