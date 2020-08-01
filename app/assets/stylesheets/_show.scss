@@ -1,40 +1,35 @@
-  .showDetail__image {
+  @mixin showDetailLayout {
     height: 220px;
     width: 220px;
     margin: 30px;
   }
 
+  @mixin showDetailTagsLayout {
+    height: 55px;
+    width: 300px;
+    padding-left: 20px;
+    list-style: none;
+    display: flex;
+    line-height: 55px;
+  }
+  
+  .showDetail__image {
+    @include showDetailLayout;
+  }
+
   .showDetail__tags {
-    height: 220px;
-    width: 220px;
-    margin: 30px;
+    @include showDetailLayout;
     color: white;
     background-color: plum;
 
     &__category {
-      height: 55px;
-      width: 300px;
-      padding-left: 20px;
-      list-style: none;
-      display: flex;
-      line-height: 55px;
-      
+      @include showDetailTagsLayout;
     }
     &__color {
-      height: 55px;
-      width: 300px;
-      padding-left: 20px;
-      list-style: none;
-      display: flex;
-      line-height: 55px;
+      @include showDetailTagsLayout;
     }
     &__season {
-      height: 55px;
-      width: 300px;
-      padding-left: 20px;
-      list-style: none;
-      display: flex;
-      line-height: 55px;
+      @include showDetailTagsLayout;
     }
 
   }
