@@ -36,9 +36,11 @@
       margin-right: 15px;
       color: white;
       border: solid 1px;
+
       .left {
         color: white;
         text-decoration: none;
+
       }
     }
 
@@ -137,3 +139,4 @@
 @import "index";
 @import "new";
 @import "show";
+@import "signup";
