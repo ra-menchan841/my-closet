@@ -1,31 +1,30 @@
-.doRegister
-  登録する
-.form
-  = form_for @item do |f|
-    = f.file_field :image, class: "image"
-    .allTags
-      .categoryTag
-        .tagName
-          Category
-        .tag
-          = f.collection_radio_buttons(:category_id, Category.all, :id, :name) do |category|
-            = category.label do
-              = category.text
-              = category.radio_button
-      .colorTag
-        .tagName
-          Color
-        .tag
-          = f.collection_radio_buttons(:color_id, Color.all, :id, :name) do |color|
-            = color.label do
-              = color.text
-              = color.radio_button
-      .seasonTag
-        .tagName
-          Season
-        .tag
-          = f.collection_radio_buttons(:season_id, Season.all, :id, :name) do |season|
-            = season.label do
-              = season.text
-              = season.radio_button
+.formAll
+  .form
+    = form_for @item do |f|
+      = f.file_field :image, class: "image"
+      .allTags
+        .categoryTag
+          .tagName
+            Category
+          .tag
+            = f.collection_radio_buttons(:category_id, Category.all, :id, :name) do |category|
+              = category.label do
+                = category.radio_button
+                = category.text
+        .colorTag
+          .tagName
+            Color
+          .tag
+            = f.collection_radio_buttons(:color_id, Color.all, :id, :name) do |color|
+              = color.label do
+                = color.radio_button
+                = color.text
+        .seasonTag
+          .tagName
+            Season
+          .tag
+            = f.collection_radio_buttons(:season_id, Season.all, :id, :name) do |season|
+              = season.label do
+                = season.radio_button
+                = season.text
       = f.submit '登録', class: "sendBtn"

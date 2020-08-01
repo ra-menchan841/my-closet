@@ -1,7 +1,11 @@
 class CategoriesController < ApplicationController
   before_action :set_categories, :set_amounts, only: [:show]
   def show
-    @items = Item.where(category_id: params[:id], user_id: current_user.id)
+    if user_signed_in?
+      @items = Item.where(category_id: params[:id], user_id: current_user.id)
+    else
+      redirect_to root_path
+    end
   end
 
   private
@@ -10,7 +14,7 @@ class CategoriesController < ApplicationController
   end
 
   def set_amounts
-    if user_signed_in?
+    if user_signed_in? 
       @amounts = []
       number = 0
       while number < 7 do

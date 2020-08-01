@@ -15,14 +15,14 @@
         - if user_signed_in?
           .header__login__right
             = link_to destroy_user_session_path, class: "right", method: :delete do
-              = "ログアウト"
+              = "Logout"
         - else
           .header__login__left
             = link_to new_user_session_path, class: "left" do
-              = "ログイン"
+              = "Login"
           .header__login__right
             = link_to new_user_registration_path, class: "right" do
-              = "新規登録"
+              = "SignUp"
     .main
       .main__side
         - if user_signed_in?
