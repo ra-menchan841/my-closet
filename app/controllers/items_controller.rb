@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_categories, :set_amounts, only: [:index, :new, :show]
-  before_action :move_to_index, only: [:new, :create, :show]
+  before_action :move_to_index, only: [:new, :create, :show, :destroy]
 
   def index
     @items = Item.where(user_id: current_user.id).order("created_at DESC") if user_signed_in?
@@ -11,7 +11,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.create(item_params)
+    Item.create(item_params)
     redirect_to root_path
   end
 
