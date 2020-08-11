@@ -1,0 +1,420 @@
+/* line 13, /Users/yayoi/projects/my-closet/app/assets/stylesheets/application.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 17, /Users/yayoi/projects/my-closet/app/assets/stylesheets/application.scss */
+.header {
+  height: 80px;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  background-color: pink;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  text-align: center;
+  line-height: 40px;
+}
+/* line 26, /Users/yayoi/projects/my-closet/app/assets/stylesheets/application.scss */
+.header__title {
+  height: 40px;
+  width: 230px;
+}
+/* line 30, /Users/yayoi/projects/my-closet/app/assets/stylesheets/application.scss */
+.header__title .titleColor {
+  text-decoration: none;
+  color: white;
+  font-size: 35px;
+}
+/* line 37, /Users/yayoi/projects/my-closet/app/assets/stylesheets/application.scss */
+.header__login {
+  display: flex;
+  padding-right: 25px;
+}
+/* line 41, /Users/yayoi/projects/my-closet/app/assets/stylesheets/application.scss */
+.header__login__left {
+  height: 40px;
+  width: 180px;
+  margin-right: 15px;
+  color: white;
+  border: solid 1px;
+}
+/* line 48, /Users/yayoi/projects/my-closet/app/assets/stylesheets/application.scss */
+.header__login__left .left {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+/* line 55, /Users/yayoi/projects/my-closet/app/assets/stylesheets/application.scss */
+.header__login__right {
+  height: 40px;
+  width: 180px;
+  border: solid 1px;
+  color: white;
+}
+/* line 61, /Users/yayoi/projects/my-closet/app/assets/stylesheets/application.scss */
+.header__login__right .right {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+/* line 70, /Users/yayoi/projects/my-closet/app/assets/stylesheets/application.scss */
+.main {
+  height: 100vh;
+  width: 100vw;
+  padding: 80px 0;
+  display: flex;
+}
+/* line 76, /Users/yayoi/projects/my-closet/app/assets/stylesheets/application.scss */
+.main__side {
+  width: 270px;
+  position: fixed;
+}
+/* line 81, /Users/yayoi/projects/my-closet/app/assets/stylesheets/application.scss */
+.main__side__registerFunction {
+  height: 90px;
+  text-align: center;
+  line-height: 90px;
+  font-size: 24px;
+  background-color: palevioletred;
+}
+/* line 88, /Users/yayoi/projects/my-closet/app/assets/stylesheets/application.scss */
+.main__side__registerFunction .register {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  display: block;
+}
+/* line 97, /Users/yayoi/projects/my-closet/app/assets/stylesheets/application.scss */
+.main__side__categories .category {
+  height: 77px;
+  width: 270px;
+  background-color: plum;
+  font-size: 20px;
+  text-align: center;
+  line-height: 77px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 40px;
+}
+/* line 109, /Users/yayoi/projects/my-closet/app/assets/stylesheets/application.scss */
+.main__side__categories .category .belong {
+  text-decoration: none;
+  color: white;
+}
+/* line 113, /Users/yayoi/projects/my-closet/app/assets/stylesheets/application.scss */
+.main__side__categories .category .amount {
+  color: white;
+}
+/* line 121, /Users/yayoi/projects/my-closet/app/assets/stylesheets/application.scss */
+.main__categoryDetail {
+  width: calc(100vw - 270px);
+  margin-left: 270px;
+  padding-bottom: 80px;
+  padding-left: 30px;
+  background-color: white;
+  height: 700px;
+  overflow: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+/* line 135, /Users/yayoi/projects/my-closet/app/assets/stylesheets/application.scss */
+.footer {
+  height: 80px;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  background-color: pink;
+  bottom: 0px;
+}
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+/* line 9, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_reset.scss */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 30, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 39, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_reset.scss */
+nav ul {
+  list-style: none;
+}
+
+/* line 43, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 47, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 53, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_reset.scss */
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+/* line 62, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_reset.scss */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+/* line 69, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_reset.scss */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 76, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 80, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_reset.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* line 85, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+/* line 91, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_reset.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 100, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_reset.scss */
+input, select {
+  vertical-align: middle;
+}
+
+/* line 1, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_index.scss */
+.itemImage {
+  height: 220px;
+  width: 220px;
+  margin: 30px;
+  align-items: center;
+}
+
+/* line 1, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_new.scss */
+.formAll {
+  height: 560px;
+  width: 1100px;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: pink;
+  color: white;
+  font-size: 18px;
+}
+
+/* line 13, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_new.scss */
+.form .image {
+  height: 60px;
+  width: 500px;
+  margin-top: 20px;
+}
+/* line 19, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_new.scss */
+.form .allTags {
+  height: 370px;
+  width: 1000px;
+}
+/* line 23, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_new.scss */
+.form .allTags .tagName {
+  height: 50px;
+  line-height: 50px;
+  font-size: 23px;
+  padding-bottom: 15px;
+}
+/* line 30, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_new.scss */
+.form .allTags .tag {
+  height: 60px;
+  line-height: 60px;
+}
+/* line 36, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_new.scss */
+.form .sendBtn {
+  height: 50px;
+  width: 100px;
+  line-height: 50px;
+  background-color: transparent;
+  border: 1px solid;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+  color: white;
+  font-size: 18px;
+}
+
+/* line 16, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_show.scss */
+.showDetail__image {
+  height: 220px;
+  width: 220px;
+  margin: 30px;
+}
+
+/* line 20, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_show.scss */
+.showDetail__tags {
+  height: 220px;
+  width: 220px;
+  margin: 30px;
+  color: white;
+  background-color: plum;
+}
+/* line 25, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_show.scss */
+.showDetail__tags__category {
+  height: 47px;
+  width: 300px;
+  padding-left: 20px;
+  list-style: none;
+  display: flex;
+  line-height: 60px;
+}
+/* line 28, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_show.scss */
+.showDetail__tags__color {
+  height: 47px;
+  width: 300px;
+  padding-left: 20px;
+  list-style: none;
+  display: flex;
+  line-height: 60px;
+}
+/* line 31, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_show.scss */
+.showDetail__tags__season {
+  height: 47px;
+  width: 300px;
+  padding-left: 20px;
+  list-style: none;
+  display: flex;
+  line-height: 60px;
+}
+
+/* line 36, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_show.scss */
+.Btns {
+  height: 35px;
+  width: 60px;
+  margin-top: 25px;
+  line-height: 35px;
+  border: 1px solid;
+  margin-left: 20px;
+}
+/* line 44, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_show.scss */
+.Btns .delete {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  padding-left: 8px;
+}
+
+/* line 5, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_signup.scss */
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  border: none;
+}
+
+/* line 12, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_signup.scss */
+.deviseAll {
+  margin-top: 30px;
+  height: 400px;
+  width: 400px;
+  background-color: pink;
+  color: white;
+}
+
+/* line 20, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_signup.scss */
+.signup_login {
+  padding: 10px;
+}
+
+/* line 24, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_signup.scss */
+.field {
+  padding: 10px;
+  height: 60px;
+}
+
+/* line 29, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_signup.scss */
+.actions {
+  padding: 10px;
+}
+
+/* line 33, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_signup.scss */
+.button {
+  height: 40px;
+  width: 60px;
+  background-color: transparent;
+  border: 1px solid;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+  color: white;
+}
+
+/* line 45, /Users/yayoi/projects/my-closet/app/assets/stylesheets/_signup.scss */
+.errorMessage {
+  padding: 10px;
+}
