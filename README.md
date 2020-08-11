@@ -1,30 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
 # アプリ概要
+所持している服を画像で管理するアプリ
+
+# 機能一覧
+・ユーザー管理機能
+・登録機能
+・削除機能
+・一覧表示機能
+・カテゴリー別の登録数表示機能
+・詳細表示機能
+
+# 技術一覧
+
 
 # DB設計
 
