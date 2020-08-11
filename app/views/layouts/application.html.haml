@@ -10,25 +10,25 @@
     .header
       .header__title
         = link_to root_path, class: "titleColor" do
-          = "MyCloset"
+          = "Cassettiera"
       .header__login
         - if user_signed_in?
           .header__login__right
             = link_to destroy_user_session_path, class: "right", method: :delete do
-              = "Logout"
+              = "Log out"
         - else
           .header__login__left
             = link_to new_user_session_path, class: "left" do
-              = "Login"
+              = "Log in"
           .header__login__right
             = link_to new_user_registration_path, class: "right" do
-              = "SignUp"
+              = "Sign Up"
     .main
       .main__side
         - if user_signed_in?
           .main__side__registerFunction
             = link_to new_item_path, class: "register" do
-              = "＋ 服を登録する"
+              = "＋ Register"
           .main__side__categories
             - @categories.zip(@amounts) do |category, amount|
               %ul.category
@@ -40,43 +40,45 @@
         - else
           .main__side__registerFunction
             = link_to root_path, class: "register" do
-              = "＋ 服を登録する"
+              = "＋ Register"
           .main__side__categories
             %ul.category
               %li.belong
-                = "トップス"
+                = "Tops"
               %li.amount
                 = "0"
             %ul.category
               %li.belong
-                = "スカート"
+                = "Skirt"
               %li.amount
                 = "0"
             %ul.category
               %li.belong
-                = "パンツ"
+                = "Pants"
               %li.amount
                 = "0"
             %ul.category
               %li.belong
-                = "ワンピース"
+                = "Onepiece"
               %li.amount
                 = "0"
             %ul.category
               %li.belong
-                = "アウター"
+                = "Outer"
               %li.amount
                 = "0"
             %ul.category
               %li.belong
-                = "バッグ"
+                = "Bag"
               %li.amount
                 = "0"
             %ul.category
               %li.belong
-                = "シューズ"
+                = "Shoes"
               %li.amount
                 = "0"
       .main__categoryDetail
         = yield
     .footer
+      = "テスト用Email：signup@test.com"
+      = "テスト用Password：testpass01"

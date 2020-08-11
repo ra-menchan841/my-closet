@@ -5,12 +5,12 @@
   }
 
   @mixin showDetailTagsLayout {
-    height: 55px;
+    height: 47px;
     width: 300px;
     padding-left: 20px;
     list-style: none;
     display: flex;
-    line-height: 55px;
+    line-height: 60px;
   }
   
   .showDetail__image {
@@ -34,13 +34,18 @@
 
   }
   .Btns {
-    height: 55px;
-    width: 300px;
-    padding-left: 20px;
-    line-height: 55px;
+    height: 35px;
+    width: 60px;
+    margin-top: 25px;
+    line-height: 35px;
+    border: 1px solid;
+    margin-left: 20px;
 
     .delete {
+      display: block;
       text-decoration: none;
       color: white;
+      font-size: 13px;
+      padding-left: 8px;
     }
   }

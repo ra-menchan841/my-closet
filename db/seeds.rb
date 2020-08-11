@@ -7,33 +7,35 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Category.create([
-  { name: 'トップス' },
-  { name: 'スカート' },
-  { name: 'パンツ' },
-  { name: 'ワンピース' },
-  { name: 'アウター' },
-  { name: 'バッグ' },
-  { name: 'シューズ' }
+  { name: 'Tops' },
+  { name: 'Skirt' },
+  { name: 'Pants' },
+  { name: 'Onepiece' },
+  { name: 'Outer' },
+  { name: 'Bag' },
+  { name: 'Shoes' }
 ])
 
 Color.create([
-  { name: 'black' },
-  { name: 'white' },
-  { name: 'gray' },
-  { name: 'beige' },
-  { name: 'brown' },
-  { name: 'red' },
-  { name: 'pink' },
-  { name: 'orange' },
-  { name: 'yellow' },
-  { name: 'green' },
-  { name: 'blue' },
-  { name: 'purple' }
+  { name: 'Black' },
+  { name: 'White' },
+  { name: 'Gray' },
+  { name: 'Beige' },
+  { name: 'Brown' },
+  { name: 'Red' },
+  { name: 'Pink' },
+  { name: 'Orange' },
+  { name: 'Yellow' },
+  { name: 'Green' },
+  { name: 'Blue' },
+  { name: 'Purple' },
+  { name: 'Other'}
 ])
 
 Season.create([
-  { name: 'spring' },
-  { name: 'summer' },
-  { name: 'autom' },
-  { name: 'winter' }
+  { name: 'Spring' },
+  { name: 'Summer' },
+  { name: 'Autumn' },
+  { name: 'Winter' },
+  { name: 'All'}
 ])
