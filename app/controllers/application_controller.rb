@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
       number = 0
       while number < 7 do
         number += 1
-        @amount = Item.where(category_id: number, user_id: current_user.id).count
+        @amount = Item.where(category_id: number, user_id: current_user.id).length
         @amounts << @amount
       end
     else
