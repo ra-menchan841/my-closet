@@ -8,19 +8,19 @@ class ApplicationController < ActionController::Base
   def set_amounts
     if user_signed_in?
       @amounts = []
-      number = 0
-      while number < 7 do
-        number += 1
+      number = 1
+      while number < 62 do 
         @amount = Item.where(category_id: number, user_id: current_user.id).length
         @amounts << @amount
+        number += 10
       end
     else
       @amounts = []
-      number = 0
-      while number < 7 do
-        number += 1
+      number = 1
+      while number < 62 do
         @amount = 0
         @amounts << @amount
+        number += 10
       end
     end
   end
