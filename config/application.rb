@@ -17,3 +17,5 @@ module MyCloset
     config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
   end
 end
+
+config.assets.initialize_on_precompile = false
