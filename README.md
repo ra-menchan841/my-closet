@@ -4,12 +4,12 @@
 所持している服を画像で管理するアプリ
 
 # 機能一覧
-・ユーザー管理機能
-・登録機能
-・削除機能
-・一覧表示機能
-・カテゴリー別の登録数表示機能
-・詳細表示機能
+- ユーザー管理機能
+- 登録機能
+- 削除機能
+- 一覧表示機能
+- カテゴリー別の登録数表示機能
+- 詳細表示機能
 
 # 技術一覧
 
@@ -23,6 +23,7 @@
 |category_id|integer|null: false, foreign_key: true|
 |color_id|integer|null: false, foreign_key: true|
 |season_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to: user
