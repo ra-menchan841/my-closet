@@ -43,6 +43,7 @@ group :development, :test do
   gem 'faker'
   gem 'rails-controller-testing'
   gem 'pry-rails'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -61,3 +62,4 @@ gem 'erb2haml'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'devise'
+gem 'mysql2'
