@@ -23,7 +23,10 @@ URL：https://my-cassettiera.herokuapp.com/
 
 ### 登録機能
 左側のregisterボタンを押下すると、画面遷移し服を登録できます。  
-登録内容は画像・カテゴリ・カラー・シーズンです。
+登録内容は画像・カテゴリ・カラー・シーズンです。  
+
+[![Image from Gyazo](https://i.gyazo.com/338df95f31ce96135d3739973bd88d71.gif)](https://gyazo.com/338df95f31ce96135d3739973bd88d71)
+
 
 ### カテゴリー別の登録表示機能
 登録した服は、左側のカテゴリ欄に数量が表示されます。  
@@ -38,6 +41,8 @@ URL：https://my-cassettiera.herokuapp.com/
 
 ### 削除機能
 詳細表示ページ内のdeleteボタンを押下すると、登録した服の削除ができます。
+
+[![Image from Gyazo](https://i.gyazo.com/ea122f0e6cf8985161325a8da9214fa4.gif)](https://gyazo.com/ea122f0e6cf8985161325a8da9214fa4)
 
 
 ## 工夫した点
