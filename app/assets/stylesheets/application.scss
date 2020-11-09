@@ -94,8 +94,9 @@ $subBackgroundColor: plum;
     }
 
     &__categories {
+
       .category {
-        height: 77px;
+        height: calc((100vh - 250px) / 7);
         width: 270px;
         background-color: $subBackgroundColor;
         font-size: 20px;
